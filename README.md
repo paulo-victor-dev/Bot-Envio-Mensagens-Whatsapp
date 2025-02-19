@@ -19,7 +19,7 @@ Certifique-se de ter o **Python 3** instalado em sua máquina.
 ### Passo a Passo
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/seu-projeto.git](https://github.com/paulo-victor-dev/Bot-Envio-Mensagens-Whatsapp.git)
+   git clone https://github.com/paulo-victor-dev/Bot-Envio-Mensagens-Whatsapp.git
    ```
 2. **Entre na pasta do projeto:**
    ```bash
