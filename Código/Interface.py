@@ -1,6 +1,6 @@
 import customtkinter as c
 import sys
-from Código.Utils import *
+from Utils import *
 
 class Tela_Principal(c.CTk):
     def __init__(self):

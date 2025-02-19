@@ -23,7 +23,7 @@ class Funcao_Botoes_Pesquisar:
         self.filedialog = filedialog
 
     def abrir_explorador_planilha(self):
-        from Código.Tela_Auxiliar import Tela_Auxiliar
+        from Tela_Auxiliar import Tela_Auxiliar
 
         if self.tela_principal.botao_procurar_planilha._state == 'disable':
             return
@@ -46,7 +46,7 @@ class Funcao_Botoes_Pesquisar:
             Tela_Auxiliar(self.tela_principal, texto='Extensão do arquivo inválida!\nPor favor, selecione uma planilha com as extensão: ".xlsx"')
 
     def abrir_explorador_img(self):
-        from Código.Tela_Auxiliar import Tela_Auxiliar
+        from Tela_Auxiliar import Tela_Auxiliar
 
         if self.tela_principal.botao_procurar_img._state == 'disable':
             return
@@ -82,7 +82,7 @@ class Funcao_Botoes_Acoes:
         self.navegador_pronto = Event()
         
     def botao_iniciar_envio(self):
-        from Código.Tela_Auxiliar import Tela_Auxiliar
+        from Tela_Auxiliar import Tela_Auxiliar
 
         if hasattr(self, 'navegador') and self.navegador:
             try:
