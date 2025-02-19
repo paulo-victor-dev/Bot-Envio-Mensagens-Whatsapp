@@ -61,7 +61,7 @@ Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precis
 <p align="center"><i>Interface da Aplicação</i></p>
 
 <p align="center">
-  <img src="./Assets/sistema_completo.png" alt="Interface da Aplicação" width="400" height="450">
+  <img src="./Assets/demonstracao_interface.png" alt="demonstracao_interface" width="750" height="700">
 </p>
 
 ## 📄 Licença
