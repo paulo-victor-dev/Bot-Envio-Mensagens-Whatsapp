@@ -16,6 +16,12 @@ Este projeto é uma aplicação desktop desenvolvida em **Python** utilizando **
 ### Pré-requisitos
 Certifique-se de ter o **Python 3** instalado em sua máquina.
 
+Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precisa estar no seguinte padrão:
+
+<img src="./Assets/estrutura_planilha.png" alt="estrutura_planilha" width="800" height="100">
+
+É possível acrescentar vários contatos nessa base, contanto que a planilha esteja nesse padrão. Caso tenha dúvidas em como organizar a planilha, utilize a [planilha base](Planilha_Base/Planilha_Base.xlsx).
+
 ### Passo a Passo
 1. **Clone o repositório:**
    ```bash
@@ -52,7 +58,11 @@ Certifique-se de ter o **Python 3** instalado em sua máquina.
 ✔️ Interface intuitiva em modo escuro  
 
 ## 📸 Demonstração
-![Interface do Bot](./assets/interface.png)
+<p align="center"><i>Interface da Aplicação</i></p>
+
+<p align="center">
+  <img src="./Assets/sistema_completo.png" alt="Interface da Aplicação" width="400" height="450">
+</p>
 
 ## 📄 Licença
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
