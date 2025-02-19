@@ -64,10 +64,6 @@ Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precis
   <img src="./Assets/sistema_completo.png" alt="Interface da Aplicação" width="400" height="450">
 </p>
 
-
-
-
-
 ## 📄 Licença
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
 
