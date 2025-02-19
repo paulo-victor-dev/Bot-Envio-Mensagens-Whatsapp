@@ -127,7 +127,6 @@ class Funcao_Botoes_Acoes:
         
         self.interromper = True
         
-    
     def iniciar_navegador(self):
         try:
             self.tela_principal.texto_area_log(texto='Iniciando navegador...')
@@ -153,7 +152,7 @@ class Funcao_Botoes_Acoes:
             self.tela_principal.botao_interromper.configure(state='normal')
 
             for linha in aba_ativa.iter_rows(min_row=2):
-                if all(linha[celula].value is None for celula in range(0, 7)):
+                if all(linha[celula].value is None for celula in range(0, 4)):
                     continue
 
                 if self.interromper:
@@ -169,23 +168,20 @@ class Funcao_Botoes_Acoes:
                     break
 
                 try:
-                    nome_cliente = linha[1].value
-                    telefone = linha[2].value
-                    vendedor = linha[3].value
-                    filial = linha[4].value
-                    nome_campanha = linha[5].value
-                    registro_banco = linha[7].value
+                    nome_contato = linha[0].value
+                    telefone = linha[1].value
+                    nome_vendedor = linha[2].value
 
-                    if not nome_cliente or not telefone or not vendedor:
-                        linha[6].value = 'Erro: Dados incompletos'
+                    if not nome_contato or not telefone or not nome_vendedor:
+                        linha[3].value = 'Erro: Dados incompletos'
                         self.salvar_planilha(planilha_clientes, self.planilha_selecionada)
                         continue
                         
-                    if linha[6].value in ['Erro em enviar a mensagem','Mensagem enviada com sucesso','Erro: Dados incompletos']:
+                    if linha[3].value in ['Erro em enviar a mensagem','Mensagem enviada com sucesso','Erro: Dados incompletos']:
                         continue
 
-                    mensagem_modificada = self.campo_msg_preenchido.replace('CLIENTE', f'{nome_cliente}')
-                    mensagem_modificada = mensagem_modificada.replace('VENDEDOR', f'{vendedor}')
+                    mensagem_modificada = self.campo_msg_preenchido.replace('CLIENTE', f'{nome_contato}')
+                    mensagem_modificada = mensagem_modificada.replace('VENDEDOR', f'{nome_vendedor}')
                     mensagem_modificada = urllib.parse.quote(mensagem_modificada)
 
                     retorno_status = self.navegador.script_envio_msgs(
@@ -194,9 +190,7 @@ class Funcao_Botoes_Acoes:
                         self.img_selecionada if self.opcao_img == 'on' else None
                     )
 
-                    linha[6].value = retorno_status
-
-                    #self.registro_banco_dados()
+                    linha[3].value = retorno_status
                 
                 except NewConnectionError:
                     pass
@@ -215,27 +209,6 @@ class Funcao_Botoes_Acoes:
             self.restaurar_interface()
             self.tela_principal.texto_area_log(texto='Envio de mensagens finalizado!')
             self.tela_principal.botao_interromper.configure(state='disable')
-
-    def registro_banco_dados(self):
-        host = 'localhost'
-        database = 'lengre56_crm'
-        user = 'lengre56_banco'
-        password = 'carlos162707'
-        port = '5432'
-
-        try:
-            # conexao = pg8000.connect(
-            #     host=host,
-            #     database=database,
-            #     user=user,
-            #     password=password,
-            #     port=port
-            # )
-
-            print('Conexão bem-sucedida!')
-            
-        except Exception as e:
-            print(f'Erro em realizar a conexão:\n{e}')
 
     def salvar_planilha(self, planilha, caminho_original):
         caminho_temporario = caminho_original + '.temp'

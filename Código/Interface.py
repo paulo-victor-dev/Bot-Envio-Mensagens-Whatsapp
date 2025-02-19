@@ -235,7 +235,6 @@ class Tela_Principal(c.CTk):
         self.logs.see('end')
         self.logs.configure(state='disable')
 
-
 if __name__=='__main__':
     if hasattr(sys, '_MEIPASS'):
         from customtkinter import set_appearance_mode
