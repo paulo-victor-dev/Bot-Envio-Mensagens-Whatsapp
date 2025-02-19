@@ -52,6 +52,8 @@ Certifique-se de ter o **Python 3** instalado em sua máquina.
 ✔️ Interface intuitiva em modo escuro  
 
 ## 📸 Demonstração
+Interface da aplicação
+![sistema_completo](./assets/sistema_completo.png)
 ![Interface do Bot](./assets/interface.png)
 
 ## 📄 Licença
