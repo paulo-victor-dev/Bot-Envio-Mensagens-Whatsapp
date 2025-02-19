@@ -20,7 +20,7 @@ Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precis
 
 <img src="./Assets/estrutura_planilha.png" alt="estrutura_planilha" width="800" height="100">
 
-Caso tenha dúvidas em como organizar a planilha, utilize a [planilha base]() 
+Caso tenha dúvidas em como organizar a planilha, utilize a [planilha base](Planilha_Base/Planilha_Base.xlsx) 
 
 
 ### Passo a Passo
