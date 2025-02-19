@@ -52,9 +52,12 @@ Certifique-se de ter o **Python 3** instalado em sua máquina.
 ✔️ Interface intuitiva em modo escuro  
 
 ## 📸 Demonstração
-Interface da aplicação
-![sistema_completo](./assets/sistema_completo.png)
-![Interface do Bot](./assets/interface.png)
+<p align="center">
+  <img src="./Assets/sistema_completo.png" alt="Interface da Aplicação" width="400" height="450">
+</p>
+
+<p align="center"><i>Interface da Aplicação</i></p>
+
 
 ## 📄 Licença
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
