@@ -180,9 +180,11 @@ class Funcao_Botoes_Acoes:
                     if linha[3].value in ['Erro em enviar a mensagem','Mensagem enviada com sucesso','Erro: Dados incompletos']:
                         continue
 
-                    mensagem_modificada = self.campo_msg_preenchido.replace('CLIENTE', f'{nome_contato}')
+                    mensagem_modificada = self.campo_msg_preenchido.replace('CONTATO', f'{nome_contato}')
                     mensagem_modificada = mensagem_modificada.replace('VENDEDOR', f'{nome_vendedor}')
                     mensagem_modificada = urllib.parse.quote(mensagem_modificada)
+
+                    print(mensagem_modificada)
 
                     retorno_status = self.navegador.script_envio_msgs(
                         telefone,
