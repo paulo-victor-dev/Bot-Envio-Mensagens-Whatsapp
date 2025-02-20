@@ -1,5 +1,4 @@
 import customtkinter as c
-import sys
 from Utils import *
 
 class Tela_Principal(c.CTk):
@@ -234,10 +233,3 @@ class Tela_Principal(c.CTk):
         self.logs.insert('end', f'-> {texto}\n\n')
         self.logs.see('end')
         self.logs.configure(state='disable')
-
-if __name__=='__main__':
-    if hasattr(sys, '_MEIPASS'):
-        from customtkinter import set_appearance_mode
-
-    app = Tela_Principal()
-    app.mainloop()
