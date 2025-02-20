@@ -16,7 +16,7 @@ Este projeto é uma aplicação desktop desenvolvida em **Python** utilizando **
 ### Pré-requisitos
 Certifique-se de ter o **Python 3** instalado em sua máquina.
 
-Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precisa estar no seguinte padrão:
+Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha precisa estar no seguinte padrão:
 
 <img src="./Assets/estrutura_planilha.png" alt="estrutura_planilha" width="800" height="100">
 
@@ -63,6 +63,12 @@ Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precis
 <p align="center">
   <img src="./Assets/demonstracao_interface.png" alt="demonstracao_interface" width="750" height="700">
 </p>
+
+<p align="center">
+  <img src="./Assets/.png" alt="" width="750" height="700">
+</p>
+
+
 
 ## 📄 Licença
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
