@@ -1,5 +1,4 @@
 # 🤖 Bot para Envio de Mensagens no WhatsApp
-
 Automatize o envio de mensagens no WhatsApp com um bot simples e eficiente. Ideal para campanhas de marketing, lembretes e comunicação em massa.
 
 ## 📖 Sobre o Projeto
@@ -16,9 +15,9 @@ Este projeto é uma aplicação desktop desenvolvida em **Python** utilizando **
 ### Pré-requisitos
 Certifique-se de ter o **Python 3** instalado em sua máquina.
 
-Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precisa estar no seguinte padrão:
+Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha precisa estar no seguinte padrão:
 
-<img src="./Assets/estrutura_planilha.png" alt="estrutura_planilha" width="800" height="100">
+<img src="./Assets/estrutura_planilha.png" alt="estrutura_planilha" width="800" height="100" style="max-width: 100%; height: auto;">
 
 É possível acrescentar vários contatos nessa base, contanto que a planilha esteja nesse padrão. Caso tenha dúvidas em como organizar a planilha, utilize a [planilha base](Planilha_Base/Planilha_Base.xlsx).
 
@@ -61,8 +60,15 @@ Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precis
 <p align="center"><i>Interface da Aplicação</i></p>
 
 <p align="center">
-  <img src="./Assets/demonstracao_interface.png" alt="demonstracao_interface" width="750" height="700">
+  <img src="./Assets/demonstracao_interface.png" alt="demonstracao_interface" width="750" height="700" style="max-width: 100%; height: auto;">
 </p>
+
+<p align="center"><i>Exemplo de envio de mensagem</i></p>
+
+<p align="center">
+  <img src="./Assets/exemplo_mensagem.png" alt="exemplo_mensagem" width="600" height="150" style="max-width: 100%; height: auto;">
+</p>
+Conforme mostra o exemplo, é possível substituir palavras na mensagem pelo nome do contato e do vendedor que está na planilha. Basta escrever "CONTATO" (tudo maiúsculo) para o nome do contato e "VENDEDOR" (tudo maiúsculo) para o nome do vendedor. Caso não tenha nenhuma dessas informações, ou não as queira colocar, pode enviar a mensagem normalmente. 
 
 ## 📄 Licença
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
