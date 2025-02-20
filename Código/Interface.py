@@ -10,6 +10,7 @@ class Tela_Principal(c.CTk):
         self.centralizar_tela_na_direita()
         self.resizable(False, False)
         self.grid_propagate(False)
+        self.protocol('WM_DELETE_WINDOW', self._func_fechar_janela)
         
         self.frame_principal()
         self.area_explorador_planilha()
@@ -233,3 +234,7 @@ class Tela_Principal(c.CTk):
         self.logs.insert('end', f'-> {texto}\n\n')
         self.logs.see('end')
         self.logs.configure(state='disable')
+
+    def _func_fechar_janela(self):
+        from Tela_Auxiliar import Tela_Auxiliar
+        Tela_Auxiliar(self, True, lambda: self.destroy(), texto='Realmente deseja encerrar o programa?')

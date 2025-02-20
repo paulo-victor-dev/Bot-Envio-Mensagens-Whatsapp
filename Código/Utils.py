@@ -239,7 +239,7 @@ class Funcao_Botoes_Acoes:
             
     def execucao_geral(self):
         if self.verificar_planilha_aberta():
-            from Código.Tela_Auxiliar import Tela_Auxiliar
+            from Tela_Auxiliar import Tela_Auxiliar
 
             Tela_Auxiliar(self.tela_principal, texto='A planilha selecionada está aberta!\nPor favor, feche-a e tente novamente!')
             return
