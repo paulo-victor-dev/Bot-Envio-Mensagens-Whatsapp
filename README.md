@@ -47,7 +47,7 @@ Ter uma **planilha Excel** com sua base de contatos salvos. Essa planilha precis
    ```
 5. **Execute o projeto:**
    ```bash
-   python Interface.py
+   python main.py
    ```
 
 ## 🛠 Funcionalidades
