@@ -1,5 +1,4 @@
 # 🤖 Bot para Envio de Mensagens no WhatsApp
-
 Automatize o envio de mensagens no WhatsApp com um bot simples e eficiente. Ideal para campanhas de marketing, lembretes e comunicação em massa.
 
 ## 📖 Sobre o Projeto
