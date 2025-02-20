@@ -8,6 +8,7 @@ from pathlib import Path
 from threading import Thread, Event
 import os
 import openpyxl
+import re
 
 qr_code_verificado = False
 msgs_carregadas = False
@@ -168,23 +169,29 @@ class Funcao_Botoes_Acoes:
                     break
 
                 try:
-                    nome_contato = linha[0].value
-                    telefone = linha[1].value
-                    nome_vendedor = linha[2].value
+                    nome_contato = linha[0].value.strip()
+                    telefone = str(linha[1].value).strip()
+                    nome_vendedor = linha[2].value.strip()
+
+                    tel_analise = re.sub(r'\D', '', telefone)
+                    tel_letra = re.search(r'[a-zA-Z]', telefone)
 
                     if not nome_contato or not telefone or not nome_vendedor:
                         linha[3].value = 'Erro: Dados incompletos'
                         self.salvar_planilha(planilha_clientes, self.planilha_selecionada)
                         continue
-                        
+
+                    if len(tel_analise) < 11 or tel_letra:
+                        linha[3].value = 'Erro: número de telefone inválido'
+                        self.salvar_planilha(planilha_clientes, self.planilha_selecionada)
+                        continue
+
                     if linha[3].value in ['Erro em enviar a mensagem','Mensagem enviada com sucesso','Erro: Dados incompletos']:
                         continue
 
                     mensagem_modificada = self.campo_msg_preenchido.replace('CONTATO', f'{nome_contato}')
                     mensagem_modificada = mensagem_modificada.replace('VENDEDOR', f'{nome_vendedor}')
                     mensagem_modificada = urllib.parse.quote(mensagem_modificada)
-
-                    print(mensagem_modificada)
 
                     retorno_status = self.navegador.script_envio_msgs(
                         telefone,
@@ -287,9 +294,8 @@ class Navegador:
             '--block-new-web-contents',
             '--disable-notifications',
             '--no-default-browser-check',
-            '--disable-features=ProtocolHandlers',
+            '--disable-features=ExternalProtocolDialog',
             '--lang=pt-BR',
-            #'--headless',
             '--window-position=0,0',
             f'--window-size={largura},{altura}'
         ]
@@ -418,4 +424,3 @@ class Navegador:
             status = 'Erro em enviar a mensagem'
             
         return status
-    
