@@ -64,11 +64,12 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
   <img src="./Assets/demonstracao_interface.png" alt="demonstracao_interface" width="750" height="700">
 </p>
 
+<p align="center"><i>Exemplo de envio de mensagem</i></p>
+
 <p align="center">
-  <img src="./Assets/.png" alt="" width="750" height="700">
+  <img src="./Assets/exemplo_mensagem.png" alt="exemplo_mensagem" width="600" height="150">
 </p>
-
-
+Conforme mostra o exemplo, é possível substituir palavras na mensagem pelo nome do contato e do vendedor que está na planilha. Basta escrever "CONTATO" (tudo maiúsculo) para o nome do contato e "VENDEDOR" (tudo maiúsculo) para o nome do vendedor. Caso não tenha nenhuma dessas informações, ou não as queira colocar, pode enviar a mensagem normalmente. 
 
 ## 📄 Licença
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
