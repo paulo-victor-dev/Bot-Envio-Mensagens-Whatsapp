@@ -70,9 +70,6 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
 </p>
 Conforme mostra o exemplo, é possível substituir palavras na mensagem pelo nome do contato e do vendedor que está na planilha. Basta escrever "CONTATO" (tudo maiúsculo) para o nome do contato e "VENDEDOR" (tudo maiúsculo) para o nome do vendedor. Caso não tenha nenhuma dessas informações, ou não as queira colocar, pode enviar a mensagem normalmente. 
 
-## 📄 Licença
-Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
-
 ## 📩 Contato
 📧 Email: vikktor.paulo@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/paulo-rocha-dev/)
