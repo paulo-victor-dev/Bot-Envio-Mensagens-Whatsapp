@@ -335,18 +335,21 @@ class Navegador:
         global qr_code_verificado
 
         if qr_code_verificado:
-            self.tela_principal.texto_area_log(texto='QR code já verificado!')
-            sleep(2)
+            sleep(1)
             return
 
         self.tela_principal.texto_area_log(texto='Verificando QR code...')
+
         while True:
             try:
-                self.wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div[2]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[1]')))
+                qr_code = self.wait.until(EC.presence_of_element_located((By.XPATH, '//canvas[@aria-label="Scan this QR code to link a device!"]')))
+                if qr_code:
+                    sleep(2)
+                    
             except:
                 self.tela_principal.texto_area_log(texto='QR code verificado!')
                 qr_code_verificado = True
-                sleep(2)
+                sleep(1)
                 break
 
     def aguardar_carregamento_msgs(self):
@@ -391,21 +394,14 @@ class Navegador:
             self.wait = None
 
     def script_envio_msgs(self, telefone, mensagem, imagem):
-        self.navegador.get(f'https://api.whatsapp.com/send?phone={telefone}&text={mensagem}')
-        sleep(2)
+        self.navegador.get(f'https://web.whatsapp.com/send?phone={telefone}&text={mensagem}')
+        sleep(3)
 
-        try:
-            botao_ini_conv = self.wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[1]/div[2]/div/section/div/div/div/div[2]/div[1]/a')))
-            botao_ini_conv.click()
-            sleep(2)
-            
-            botao_usar_whats = self.wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[1]/div[2]/div/section/div/div/div/div[3]/div/div/h4[2]/a/span')))
-            botao_usar_whats.click()
-            sleep(2)
-            
+        try:           
             if imagem:
                 botao_mais = self.wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div/div[3]/div/div[4]/div/footer/div[1]/div/span/div/div[1]/div/button/span')))
                 botao_mais.click()
+                sleep(2)
 
                 botao_fotos = self.wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div/div/span[5]/div/ul/div/div/div[2]/li/div/input')))
                 botao_fotos.send_keys(imagem)
@@ -415,6 +411,7 @@ class Navegador:
                 enter.click()
                 sleep(6)
             else:
+                sleep(3)
                 enter = self.wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div[3]/div/div[4]/div/footer/div[1]/div/span/div/div[2]/div[2]/button/span')))
                 enter.click()
                 sleep(6)
