@@ -2,7 +2,7 @@
 Automatize o envio de mensagens no WhatsApp com um bot simples e eficiente. Ideal para campanhas de marketing, lembretes e comunicação em massa.
 
 ## 📖 Sobre o Projeto
-Este projeto é uma aplicação desktop desenvolvida em **Python** utilizando **customTKinter** para criar uma interface gráfica. Ele permite o envio automatizado de mensagens personalizadas no **WhatsApp** a partir de uma lista de contatos salvos numa planilha Excel. Também conta com suporte a anexos de imagens, onde é possível enviar sua mensagem junto de uma imagem, conforme sua escolha.
+Este projeto é uma aplicação desktop desenvolvida em **Python** que utiliza o **customTKinter** para criar uma interface gráfica, permitindo o envio automatizado de mensagens personalizadas no **WhatsApp Web** a partir de uma lista de contatos armazenada em uma planilha do Excel. Além disso, conta com suporte para anexos de imagens, possibilitando enviar sua mensagem acompanhada de uma imagem, de acordo com sua escolha.
 
 ## 🚀 Tecnologias Utilizadas
 - [Python 3](https://www.python.org/)
