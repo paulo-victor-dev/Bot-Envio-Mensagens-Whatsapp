@@ -44,9 +44,9 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
    ```bash
    pip install -r requirements.txt
    ```
-5. **Entre na pasta "Código":**
+5. **Entre na pasta "Codigo":**
    ```bash
-   cd Código
+   cd Codigo
    ```
 6. **Execute o projeto:**
    ```bash
