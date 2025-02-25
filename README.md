@@ -53,8 +53,7 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
 ✔️ Seleção de planilha de contatos  
 ✔️ Escolha de imagens para envio  
 ✔️ Digitação e envio de mensagens personalizadas  
-✔️ Log de sistema para monitoramento  
-✔️ Interface intuitiva em modo escuro  
+✔️ Log de sistema para monitoramento
 
 ## 📸 Demonstração
 <p align="center"><i>Interface da Aplicação</i></p>
