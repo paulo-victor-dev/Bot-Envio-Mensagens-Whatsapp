@@ -2,7 +2,7 @@
 Automatize o envio de mensagens no WhatsApp com um bot simples e eficiente. Ideal para campanhas de marketing, lembretes e comunicação em massa.
 
 ## 📖 Sobre o Projeto
-Este projeto é uma aplicação desktop desenvolvida em **Python** utilizando **customTKinter** para criar uma interface gráfica. Ele permite o envio automatizado de mensagens personalizadas no **WhatsApp** a partir de uma lista de contatos salvos numa planilha Excel. Também conta com suporte a anexos de imagens, onde é possível enviar sua mensagem junto de uma imagem, conforme sua escolha.
+Este projeto é uma aplicação desktop desenvolvida em **Python** que utiliza o **customTKinter** para criar uma interface gráfica, permitindo o envio automatizado de mensagens personalizadas no **WhatsApp Web** a partir de uma lista de contatos armazenada em uma planilha do Excel. Além disso, conta com suporte para anexos de imagens, possibilitando enviar sua mensagem acompanhada de uma imagem, de acordo com sua escolha.
 
 ## 🚀 Tecnologias Utilizadas
 - [Python 3](https://www.python.org/)
@@ -44,7 +44,11 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
    ```bash
    pip install -r requirements.txt
    ```
-5. **Execute o projeto:**
+5. **Entre na pasta "Código":**
+   ```bash
+   cd Código
+   ```
+6. **Execute o projeto:**
    ```bash
    python main.py
    ```
@@ -53,8 +57,7 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
 ✔️ Seleção de planilha de contatos  
 ✔️ Escolha de imagens para envio  
 ✔️ Digitação e envio de mensagens personalizadas  
-✔️ Log de sistema para monitoramento  
-✔️ Interface intuitiva em modo escuro  
+✔️ Log de sistema para monitoramento
 
 ## 📸 Demonstração
 <p align="center"><i>Interface da Aplicação</i></p>
@@ -69,9 +72,6 @@ Tenha uma **planilha Excel** com sua base de contatos salvos. Essa planilha prec
   <img src="./Assets/exemplo_mensagem.png" alt="exemplo_mensagem" width="600" height="150" style="max-width: 100%; height: auto;">
 </p>
 Conforme mostra o exemplo, é possível substituir palavras na mensagem pelo nome do contato e do vendedor que está na planilha. Basta escrever "CONTATO" (tudo maiúsculo) para o nome do contato e "VENDEDOR" (tudo maiúsculo) para o nome do vendedor. Caso não tenha nenhuma dessas informações, ou não as queira colocar, pode enviar a mensagem normalmente. 
-
-## 📄 Licença
-Este projeto está sob a licença [MIT](LICENSE). Sinta-se livre para utilizá-lo e modificá-lo!
 
 ## 📩 Contato
 📧 Email: vikktor.paulo@gmail.com  
